@@ -9,6 +9,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
+RUN apk add python make g++
 RUN npm install
 
 # add app
